@@ -1,6 +1,6 @@
 mod bfs;
 mod utils;
-
+mod dfs;
 
 fn main() {
     let maze = get_maze();
@@ -11,6 +11,13 @@ fn main() {
         println!("\nBFS path ({} steps):", path.len());
         for step in path {
             println!("{:?}", step);
+        }
+    }
+
+    if let Some (path) = dfs::dfs(&maze, start, end){
+        println!("\n DFS path ({} steps):", path.len());
+        for  step in path {
+            println!("{:?}", step)
         }
     }
 }
