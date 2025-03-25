@@ -16,8 +16,8 @@ fn main() {
 
     if let Some (path) = dfs::dfs(&maze, start, end){
         println!("\n DFS path ({} steps):", path.len());
-        for  step in path {
-            println!("{:?}", step)
+        for step in path {
+            println!("{:?}", step);
         }
     }
 }

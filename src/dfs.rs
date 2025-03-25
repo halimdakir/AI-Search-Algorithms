@@ -1,5 +1,5 @@
 use std::collections::{HashMap, HashSet};
-use crate::utils::{get_neighbors, Position};
+use crate::utils::{current_position, get_neighbors, Position};
 
 //Depth-First Search
 pub fn dfs(maze: &Vec<Vec<u8>>, start: Position, goal:Position) -> Option<Vec<Position>>{
@@ -11,15 +11,9 @@ pub fn dfs(maze: &Vec<Vec<u8>>, start: Position, goal:Position) -> Option<Vec<Po
 
     while let Some(current) = stack.pop() {
         visited.insert(current);
-        if current == goal {
-            // Reconstruct path
-            let mut full_path = vec![current];
-            let mut prev = current;
-            while let Some(&p) = path.get(&prev) {
-                full_path.push(p);
-                prev = p;
-            }
-            full_path.reverse();
+
+        // Reconstruct path
+        if let Some(full_path) = current_position(current, goal, &path){
             return Some(full_path);
         }
 

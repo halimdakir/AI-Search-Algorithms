@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 pub type Position = (usize, usize);
 
 pub fn get_neighbors(pos: Position, maze: &Vec<Vec<u8>>) -> Vec<Position> {
@@ -18,4 +20,22 @@ pub fn get_neighbors(pos: Position, maze: &Vec<Vec<u8>>) -> Vec<Position> {
     }
 
     neighbors
+}
+
+
+pub fn current_position(current: Position, goal: Position, path: &HashMap<Position, Position>) -> Option<Vec<Position>> {
+
+    if current == goal {
+        // Reconstruct path
+        let mut full_path = vec![current];
+        let mut prev = current;
+        while let Some(&p) = path.get(&prev) {
+            full_path.push(p);
+            prev = p;
+        }
+        full_path.reverse();
+        return Some(full_path);
+    }
+
+    None
 }
