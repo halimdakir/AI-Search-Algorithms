@@ -33,7 +33,7 @@ The maze is represented as a 2D vector of integers:
 - Guarantees the shortest path in terms of number of steps.
 - Uses a queue (FIFO) for traversal.
 
-![output2](https://github.com/user-attachments/assets/783e079e-a3d8-483b-b8f1-5d6ca0db65a3)
+![output2](https://github.com/user-attachments/assets/c1e03417-3f0c-4910-9ef6-f22f4aafff35)
 
 
 ### Depth-First Search (DFS)
