@@ -22,7 +22,8 @@ The maze is represented as a 2D vector of integers:
 - Start: `(0, 1)`
 - End: `(9, 18)`
 
-  ![output1](https://github.com/user-attachments/assets/c54f70f8-d31c-4962-846f-9a3197c7f1e7)
+  ![output1](https://github.com/user-attachments/assets/49c6b928-4e5d-4bb9-9e62-484edfd14747)
+
 
 ---
 
@@ -33,7 +34,7 @@ The maze is represented as a 2D vector of integers:
 - Guarantees the shortest path in terms of number of steps.
 - Uses a queue (FIFO) for traversal.
 
-![output2](https://github.com/user-attachments/assets/c1e03417-3f0c-4910-9ef6-f22f4aafff35)
+![output2](https://github.com/user-attachments/assets/7c2f4139-dbe4-415f-9b32-daac856ab753)
 
 
 ### Depth-First Search (DFS)
@@ -41,10 +42,16 @@ The maze is represented as a 2D vector of integers:
 - Does not guarantee the shortest path.
 - Uses a stack (LIFO) for traversal.
 
+![output3](https://github.com/user-attachments/assets/c1bc084e-a93f-4df9-8fdd-e1ba772989c8)
+
+
 ### A* Search
 - Combines actual cost from the start with a heuristic to the goal.
 - Uses Manhattan Distance as the heuristic function.
 - Uses a priority queue to explore the most promising paths first.
+
+![output4](https://github.com/user-attachments/assets/1b4d51b6-8528-4b2a-a859-ad80f1624614)
+
 
 ---
 
