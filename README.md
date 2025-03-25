@@ -58,7 +58,7 @@ Maze visualization (walls in black, start in red, end in blue):
 - Prioritizes paths most likely to reach the goal quickly.
 - Uses a priority queue.
 
-**A* path visualization:**
+**A\* path visualization:**
 
 ![A*](https://github.com/user-attachments/assets/1b4d51b6-8528-4b2a-a859-ad80f1624614)
 
